@@ -106,20 +106,23 @@
                 <div class = "details">
                     <h1 id ="h1">Please fill out the details below and I will get back to you ASAP!</h1>
                     
-                    <form>
-                        <label for = name id = "Name"> Name:</label> <br>
-                        <input type = "text" id = "name" required><br>
+                    <form action = "https://formsubmit.co/846514b25967686c14a723b99b5bf9d0" method = "POST">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="Projects/Website/ThankYou.html">
+
+                        <label for = name> Name:</label> <br>
+                        <input type = "text" id = "name" name = "FullName" required><br>
 
                         <label for = phone> Phone #:</label> <br>
-                        <input type = "tel" id = "phone" placeholder=" ###-###-####" required ><br>
+                        <input type = "tel" id = "phone" name = "Phone" placeholder=" ###-###-####" required ><br>
 
                         <label for = email> Email:</label> <br>
-                        <input type = "email" id = "email" placeholder=" Joe123@gmail.com" required> <br>
+                        <input type = "email" id = "email" name = "Email" placeholder= " Joe123@gmail.com" required> <br>
                         
                         <label for = message> Message:</label> <br>
-                        <input type = "text" id = "message" required> <br>
+                        <textarea id = "message" name = "Message" placeholder="Enter a message..." required></textarea><br>
 
-                        <input type="submit" id = "submit">
+                        <button type="submit" id = "submit"> Submit </button>
 
                     </form>
                 </div>
@@ -136,6 +139,6 @@
         
         
         
-        
+        <script src = "web.js"></script>
     </body>
 </html>
