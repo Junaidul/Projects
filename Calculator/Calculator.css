@@ -1,0 +1,65 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    background-color: hsl(287, 6%, 17%);
+}
+
+h1{
+    position: relative; top: 200px; left: 100px;
+    width: 500px;
+    max-width: fit-content;
+    font-size: 100px;
+    color: white;
+}
+.calculator{
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1),50px 50px 15px rgba(0, 0, 0, 0.2);    
+    background-color: transparent;
+    width: 400px;
+    height: 550px;
+    border-radius: 20px;
+    position:relative;left: 45%;top: -100px;
+}
+
+#screen{
+    overflow: hidden;
+    border-radius: 20px;
+    background-color: transparent;
+    font-size: 35px;
+    width: 330px;
+    height: 100px;
+    margin: 10px;
+    color: white;
+    text-align: right;
+    border: none;
+}
+
+.funcNum{
+    text-align: center;
+    
+}
+
+button{
+    border: none;
+    border-radius: 50px;
+    height: 60px;
+    width: 60px;
+    margin: 10px;
+    font-size: 25px;
+    background: transparent;
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1),5px 5px 15px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    cursor: pointer;
+    
+    
+}
+
+.row1 , .row2 , .row3 , .row4 , .row5{
+    background-color: transparent;
+}
+.equal{
+    width: 143.2px;
+}
+
+#screen{
+    font-size: 50px;
+}
