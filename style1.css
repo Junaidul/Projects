@@ -1,3 +1,4 @@
+
 html{
     scroll-behavior:smooth;
 }
@@ -75,10 +76,27 @@ html{
 
 /*Home*/
 
+
+@keyframes disappear {
+    0% {opacity:0%;}
+    100% {opacity: 0%;}
+}
+@keyframes appear {
+    0% {opacity:0%;}
+    100% {opacity: 100%;}
+}
+
+
+
+
+
+
+
 #buy{
-    position: relative;top: 12%;
+    position: relative;top: 30%; left: 10%;
     font-size: 80px;
     text-align: center; 
+    height: fit-content;
 }
 .home{
     height: 100vh;
@@ -91,24 +109,26 @@ html{
 }
 
 .home h1{
-
     margin-bottom: 10px;
     font-size: 80px;
-    width: 65%;
+    width: 40%;
 }
 
-#button{
-    position: relative; left: 27%; top: 12%;
+#home_button{
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+    position: relative; left: 25%; top: 35%;
     font-size: 20px;
     color: rgb(0, 0, 0);
     border: none;
     border-radius: 10px;
-    width: 200px;
-    height: 100px;
+    width: 150px;
+    height: 75px;
     cursor: pointer;
     background-color: white;
-
+    animation: disappear 6s , appear 1s 6s ease-in ;
 }
+
+
 .htxt a{
     display:contents;
     margin-left: 0px;
