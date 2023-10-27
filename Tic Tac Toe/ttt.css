@@ -1,0 +1,88 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background-color: black;
+    color: white;
+    font-family: "Permanent Marker" , cursive;
+}
+
+
+.container{
+    width: 100%;
+    height: 100vh;
+}
+
+
+.heading{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+}
+
+
+.table{
+    position: relative; left: 35%;top: 7%;
+    width: 450px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: transparent;
+}
+
+.cell{
+    border: 1px solid white;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    font-size: 40px;
+
+}
+
+.cell:hover{
+    background-color: rgba(79, 60, 69, 0.63);
+    cursor: pointer;
+}
+
+.cell:nth-of-type(3n){                  /*This removes the border-top of right column cells */
+    border-right: none;
+}
+
+.cell:nth-of-type(1n){                  /*This removes the border-left of left column cells */
+    border-left: none;
+}
+
+.cell:nth-of-type(n + 7){               /*This removes the border-bottom of the last 3 cells */    
+    border-bottom: none;
+}
+
+ .cell:nth-of-type(n - 3){              /*This removes the border-top of the first 3 cells */
+    border-top: none;  
+}
+
+
+
+.turn{
+    width: 29%;
+    height: fit-content;
+    position: relative;top: -50%;
+    font-size: 80px;
+    text-align: center;
+}
+
+
+button{
+    border: none;
+    position: relative; bottom: 45%; left: 12%;
+    width: 100px;
+    height: 40px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+

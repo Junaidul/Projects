@@ -1,0 +1,80 @@
+/* body{
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  color: white;
+  margin: 0px;
+  padding: 0px;
+}
+
+
+@keyframes blinking {
+  from , to{
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: white;
+  }
+
+}
+
+
+@keyframes slideInRight {
+  from {
+     
+    width: 0px;
+  }
+
+  to{
+    width: 100%;
+  }
+  
+}
+
+
+
+.overall h1{
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 20px;
+  border-right: solid 5px white; 
+  letter-spacing: 5px;
+  position: relative; left: 50%; top: 50vh;
+  animation: slideInRight 3.8s steps(30 , end), blinking 0.8s step-end infinite;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
