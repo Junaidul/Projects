@@ -46,6 +46,9 @@ function game(button , letterClicked){
         });
         running = false;
     } 
+    if(!rand_animal.includes(letterClicked)){
+        button.style.backgroundColor = "grey";
+    };
     if (!rand_soccer.includes(letterClicked) & x > 0 & running) {
         x--;
         wrong.textContent = `Wrong Guess!!! Try again! You have ${x} guesses left`;
