@@ -46,7 +46,7 @@ function game(button , letterClicked){
         });
         running = false;
     } 
-    if(!rand_animal.includes(letterClicked)){
+    if(!rand_soccer.includes(letterClicked)){
         button.style.backgroundColor = "grey";
     };
     if (!rand_soccer.includes(letterClicked) & x > 0 & running) {
