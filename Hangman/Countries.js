@@ -47,7 +47,7 @@ function game(button, letterClicked){
         });
         running = false;
     } 
-    if(!rand_animal.includes(letterClicked)){
+    if(!rand_countries.includes(letterClicked)){
         button.style.backgroundColor = "grey";
     };
     if (!rand_countries.includes(letterClicked) & x > 0 & running) {
