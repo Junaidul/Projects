@@ -35,6 +35,9 @@ function game(button , letterClicked){
             }
         })
     }
+    if(!rand_animal.includes(letterClicked)){
+        button.style.backgroundColor = "green";
+    };
     if (correctWord.length === rand_brands.length) {
         wrong.textContent = "You found the word!";
         let play_again = document.createElement('button');
