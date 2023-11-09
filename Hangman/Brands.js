@@ -35,7 +35,7 @@ function game(button , letterClicked){
             }
         })
     }
-    if(!rand_animal.includes(letterClicked)){
+    if(!rand_brands.includes(letterClicked)){
         button.style.backgroundColor = "grey";
     };
     if (correctWord.length === rand_brands.length) {
