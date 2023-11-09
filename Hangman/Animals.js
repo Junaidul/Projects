@@ -48,7 +48,7 @@ function game(button, letterClicked){
         running = false;
     } 
     if(!rand_animal.includes(letterClicked)){
-        button.style.backgroundColor = "gray";
+        button.style.backgroundColor = "grey";
     };
     if (!rand_animal.includes(letterClicked) & x > 0 & running) {
         x--;
