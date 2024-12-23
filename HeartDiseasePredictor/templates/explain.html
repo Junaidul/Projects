@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #7b142e;
+            padding: 15px 20px;
+            color: white;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            color: #7b142e;
+        }
+
+        .terms-container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .term {
+            margin-bottom: 20px;
+        }
+
+        .term h3 {
+            color: #4e0d21;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-links">
+            <a href="{% url 'home'%}" target="_blank">Home Page</a>
+            <a href="{% url 'heart'%}" target="_blank">Heart Disease Predictor</a>
+        </div>
+    </div>
+    
+    <div class="terms-container">
+        <h1>Heart Disease Prediction Terms</h1>
+        <div class="term">
+            <h3>Age</h3>
+            <p>The number of years a person has lived. It helps determine health risks since many conditions are more common as people grow older.</p>
+        </div>
+
+        <div class="term">
+            <h3>Sex</h3>
+            <p>Whether the individual is biologically male or female. This is important because some health conditions are more likely in one sex than the other.</p>
+        </div>
+
+        <div class="term">
+            <h3>Chest Pain Type (CP)</h3>
+            <p>The type of chest pain a person experiences:</p>
+            <ul>
+                <li><strong>0 (Typical Angina):</strong> Pain caused by reduced blood flow to the heart.</li>
+                <li><strong>1 (Atypical Angina):</strong> Unusual pain that may not be related to the heart.</li>
+                <li><strong>2 (Non-Anginal Pain):</strong> Pain not related to heart problems.</li>
+                <li><strong>3 (Asymptomatic):</strong> No chest pain, but there may still be heart issues.</li>
+            </ul>
+        </div>
+
+        <div class="term">
+            <h3>Resting Blood Pressure (mmHg)</h3>
+            <p>The pressure of blood against the walls of the arteries when the heart is at rest between beats. It's measured in millimeters of mercury (mmHg). High blood pressure can stress the heart and arteries.</p>
+        </div>
+
+        <div class="term">
+            <h3>Serum Cholesterol (mg/dL)</h3>
+            <p>The amount of cholesterol in the blood, measured in milligrams per deciliter. Cholesterol is a fatty substance that can build up in arteries, increasing the risk of heart disease.</p>
+        </div>
+
+        <div class="term">
+            <h3>Fasting Blood Sugar (FBS)</h3>
+            <p>The level of sugar in the blood after fasting for at least 8 hours. High levels can indicate diabetes, which is a risk factor for heart disease.</p>
+        </div>
+
+        <div class="term">
+            <h3>Resting ECG</h3>
+            <p>A test called an electrocardiogram (ECG) that measures the electrical activity of the heart while at rest. It can detect abnormalities in heart rhythm or structure.</p>
+        </div>
+
+        <div class="term">
+            <h3>Max Heart Rate Achieved (Thalach)</h3>
+            <p>The highest heart rate a person reaches during physical activity or a stress test. It's an indicator of heart performance and fitness.</p>
+        </div>
+
+        <div class="term">
+            <h3>Exercise Induced Angina (Exang)</h3>
+            <p>Whether chest pain occurs during exercise:</p>
+            <ul>
+                <li><strong>1 (Yes):</strong> Angina is present during exercise.</li>
+                <li><strong>0 (No):</strong> No angina during exercise.</li>
+            </ul>
+        </div>
+
+        <div class="term">
+            <h3>ST Depression (Oldpeak)</h3>
+            <p>A measurement from the ECG that shows changes in the heart's electrical activity during exercise compared to rest. It indicates how much the heart muscle is stressed during activity.</p>
+        </div>
+
+        <div class="term">
+            <h3>Peak Exercise ST Segment (Slope)</h3>
+            <p>The pattern of the heart's electrical activity during peak exercise:</p>
+            <ul>
+                <li><strong>0 (Upsloping):</strong> May indicate normal heart function.</li>
+                <li><strong>1 (Flat):</strong> Suggests possible heart disease.</li>
+                <li><strong>2 (Downsloping):</strong> Often indicates heart disease.</li>
+            </ul>
+        </div>
+
+        <div class="term">
+            <h3>Number of Major Vessels (CA)</h3>
+            <p>The number of major blood vessels supplying the heart that are visible during a test called fluoroscopy. A higher number suggests better blood flow, while fewer may indicate blockages.</p>
+        </div>
+
+        <div class="term">
+            <h3>Thalassemia (Thal)</h3>
+            <p>A blood disorder that affects the ability of red blood cells to carry oxygen:</p>
+            <ul>
+                <li><strong>0 (Normal):</strong> No issue with blood cells.</li>
+                <li><strong>1 (Fixed Defect):</strong> A permanent abnormality in blood flow or oxygen transport.</li>
+                <li><strong>2 (Reversible Defect):</strong> A temporary issue that might be corrected with treatment.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

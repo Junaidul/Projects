@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Predictor</title>
+</head>
+<body style="display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; background: linear-gradient(to right, #7b142e, #4e0d21); color:rgb(0, 0, 0);">
+
+    <form method="POST" action="{% url 'heart' %}" class="shadow p-4 rounded" style="width: 50%; background-color: white; color: black;">
+        {% csrf_token %}
+        <h1 class="text-center mb-4">Heart Disease Prediction Form <br> <a href="{% url 'explain' %}" target="_blank" style="font-size: 0.5em; text-decoration: none; color: black;">Need Help? Click here!</a></h1>
+        
+        <div class="mb-3">
+            <label for="age" class="form-label">Age</label>
+            <input type="number" id="age" name="age" class="form-control" min="1" max="150" placeholder="Enter your age" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="sex" class="form-label">Sex</label>
+            <input type="number" id="sex" name="sex" class="form-control" min="0" max="1" placeholder="Enter 1 for Male, 0 for Female" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="cp" class="form-label">Chest Pain Type (CP)</label>
+            <input type="number" id="cp" name="cp" class="form-control" min="1" max="4" placeholder="Enter value from 1 to 4" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="trestbps" class="form-label">Resting Blood Pressure (mmHg)</label>
+            <input type="number" id="trestbps" name="trestbps" class="form-control" placeholder="Enter resting blood pressure" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="chol" class="form-label">Serum Cholesterol (mg/dL)</label>
+            <input type="number" id="chol" name="chol" class="form-control" placeholder="Enter serum cholesterol value" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="fbs" class="form-label">Fasting Blood Sugar (FBS)</label>
+            <input type="number" id="fbs" name="fbs" class="form-control" min="0" max="1" placeholder="Enter 1 for True, 0 for False" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="restecg" class="form-label">Resting ECG</label>
+            <input type="number" id="restecg" name="restecg" class="form-control" min="0" max="2" placeholder="Enter value from 0 to 2" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="thalach" class="form-label">Max Heart Rate Achieved (Thalach)</label>
+            <input type="number" id="thalach" name="thalach" class="form-control" placeholder="Enter maximum heart rate achieved" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="exang" class="form-label">Exercise Induced Angina (Exang)</label>
+            <input type="number" id="exang" name="exang" class="form-control" min="0" max="1" placeholder="Enter 1 for Yes, 0 for No" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="oldpeak" class="form-label">ST Depression (Oldpeak)</label>
+            <input type="number" id="oldpeak" name="oldpeak" class="form-control" step="0.01" placeholder="Enter decimal value" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="slope" class="form-label">Peak Exercise ST Segment (Slope)</label>
+            <input type="number" id="slope" name="slope" class="form-control" min="1" max="3" placeholder="Enter value from 1 to 3" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="ca" class="form-label">Number of Major Vessels (CA)</label>
+            <input type="number" id="ca" name="ca" class="form-control" min="0" max="4" placeholder="Enter value from 0 to 4" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="thal" class="form-label">Thalassemia (Thal)</label>
+            <input type="number" id="thal" name="thal" class="form-control" min="0" max="7" placeholder="Enter value from 0 to 7" required>
+        </div>
+        
+        <button type="submit" class="btn btn-primary w-100">Submit</button>
+    </form>
+    {% if prediction_result %}
+        <div class="alert alert-info text-center">
+            <h3>Prediction Result:</h3>
+            <p>{{ prediction_result }}</p>
+        </div>
+    {% endif %}
+</body>
+</html>
+

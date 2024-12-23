@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'CSS/home.css' %}" rel="stylesheet">
+    <title>Heart Disease</title>
+</head>
+<body>
+    <div id="container">
+        <div id="top_content">
+            <div id="left_content">
+                <h1>Heart Disease Predictor</h1>
+                <p>Analyzing risk factors to forecast likely hood of developing heart conditions</p>
+                <h3>By Mohammed Islam</h3>  
+            </div>
+            <div id="heart"></div>
+        </div>
+        <div id="bottom_content">
+            <div id="first">
+                <p>Symptoms</p>
+                <a href="https://www.mountsinai.org/health-library/selfcare-instructions/warning-signs-and-symptoms-of-heart-disease" target="_blank"><img id="first_pic" src="{% static 'images/one.png' %}"></a>
+            </div>
+            <div id="second">
+                <p>Diagnosis and Treatment</p>
+                <a href="https://www.heartandstroke.ca/heart-disease/treatments" target="_blank"><img id="first_pic" src="{% static 'images/two.png' %}" ></a>
+            </div>
+            <div id="third">
+                <p>Heart Disease Predictor</p>
+                <a href="{% url 'heart' %}" target="_blank"><img id="first_pic" src="{% static 'images/three.png'%}" alt="Predictor" ></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
